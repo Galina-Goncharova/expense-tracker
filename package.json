@@ -4,14 +4,18 @@
   "version": "0.0.0",
   "source": "src/index.html",
   "browserslist": "> 0.5%, last 2 versions, not dead",
+  "homepage": "https://galina-goncharova.github.io/expense-tracker/",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build"
+    "build": "parcel build src/*.html --public-url /expense-tracker/",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "lodash": "^4.17.23"
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "parcel": "^2.14.0"
   }
 }
