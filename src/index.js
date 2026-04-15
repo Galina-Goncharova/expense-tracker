@@ -7,12 +7,12 @@ import { calculateTotal } from "./js/calculateTotal.js";
 import { allExpense } from "./js/state.js";
 
 const savedData = localStorage.getItem(KEY_LOCAL_STORAGE);
+
 if (savedData) {
   const parsedData = JSON.parse(savedData);
   allExpense.push(...parsedData);
-  renderList();
-  calculateTotal();
 }
-
+renderList();
+calculateTotal();
 ref.formEl.addEventListener("submit", addExpense);
 ref.listExpenseEl.addEventListener("click", removeExpense);
