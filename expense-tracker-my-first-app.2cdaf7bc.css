@@ -5,4 +5,8 @@ body {
   padding: 20px;
   font-family: sans-serif;
 }
+
+ul {
+  list-style: none;
+}
 /*# sourceMappingURL=expense-tracker-my-first-app.2cdaf7bc.css.map */
